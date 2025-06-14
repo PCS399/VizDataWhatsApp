@@ -3,16 +3,58 @@ url: https://PCS399.github.io/VizDataWhatsApp/
 template:
   params:
     bootswatch: cosmo
+    logo:
+      src: logo.svg
+      alt: "VizDataWhatsApp Logo"
+    navbar:
+      type: fixed-top
+      bg: "#128C7E"
+      right:
+        - icon: fa-github fa-lg
+          href: https://github.com/PCS399/VizDataWhatsApp
+        - icon: fa-book fa-lg
+          href: reference/index.html
+        - icon: fa-file fa-lg
+          href: articles/index.html
+
+home:
+  strip_header: true
+  links:
+    - text: "Voir sur GitHub"
+      href: https://github.com/PCS399/VizDataWhatsApp
+    - text: "Rapporter un bug"
+      href: https://github.com/PCS399/VizDataWhatsApp/issues
 
 reference:
   - title: "Fonctions principales"
     desc: "Fonctions principales du package"
+    contents:
+      - run_whatsapp_viz_app
+      - load_whatsapp_data
+  - title: "Fonctions de visualisation"
+    desc: "Fonctions pour créer les graphiques"
+    contents:
+      - plot_activity_by_weekday
+      - plot_activity_by_hour
+      - plot_lexical_diversity
+      - plot_message_reactions
+      - plot_avg_message_length
+      - plot_messages_by_author
+      - plot_messages_per_day
+      - plot_message_evolution
+      - plot_most_used_emojis
+      - plot_most_used_words
   - title: "Fonctions utilitaires"
     desc: "Fonctions utilitaires et internes"
+    contents:
+      - get_translations
+      - update_ui_translations
 
 articles:
   - title: "Guide de démarrage"
     navbar: "Guide"
     contents:
       - "getting-started"
-      - "examples" 
+      - "import-data"
+      - "visualization"
+      - "customization" 

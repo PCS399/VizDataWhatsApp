@@ -1,0 +1,61 @@
+---
+title: "Importation des données"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Importation des données}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Exportation depuis WhatsApp
+
+Pour utiliser VizDataWhatsApp, vous devez d'abord exporter vos conversations depuis WhatsApp :
+
+1. Ouvrez la conversation dans WhatsApp
+2. Appuyez sur les trois points en haut à droite
+3. Sélectionnez "Plus" > "Exporter la conversation"
+4. Choisissez "Sans média"
+5. Envoyez le fichier par email ou sauvegardez-le
+
+# Importation dans l'application
+
+Une fois que vous avez le fichier d'export :
+
+1. Lancez l'application avec `run_whatsapp_viz_app()`
+2. Cliquez sur le bouton "Parcourir" dans l'interface
+3. Sélectionnez votre fichier d'export WhatsApp
+4. L'application chargera automatiquement les données
+
+# Format des données
+
+Le fichier d'export WhatsApp contient les informations suivantes :
+- Horodatage des messages
+- Auteur du message
+- Contenu du message
+- Réactions aux messages
+
+# Exemple de code
+
+```{r eval=FALSE}
+# Charger les données manuellement
+data <- load_whatsapp_data("chemin/vers/votre/fichier.txt")
+
+# Afficher les premières lignes
+head(data)
+```
+
+# Dépannage
+
+Si vous rencontrez des problèmes lors de l'importation :
+
+1. Vérifiez que le fichier est bien au format texte
+2. Assurez-vous que le fichier n'est pas vide
+3. Vérifiez que le format de date correspond à votre région
+4. Consultez la documentation de `rwhatsapp` pour plus de détails 

@@ -1,0 +1,81 @@
+---
+title: "Visualisation des données"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Visualisation des données}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Types de visualisations
+
+VizDataWhatsApp offre plusieurs types de visualisations pour analyser vos conversations :
+
+## Activité temporelle
+
+### Par jour de la semaine
+```{r eval=FALSE}
+# Créer un graphique d'activité par jour
+plot_activity_by_weekday(data, authors = NULL)
+```
+
+### Par heure
+```{r eval=FALSE}
+# Créer un graphique d'activité par heure
+plot_activity_by_hour(data, authors = NULL)
+```
+
+## Analyse lexicale
+
+### Diversité lexicale
+```{r eval=FALSE}
+# Analyser la diversité du vocabulaire
+plot_lexical_diversity(data, authors = NULL)
+```
+
+## Réactions aux messages
+
+```{r eval=FALSE}
+# Visualiser les réactions
+plot_message_reactions(data, authors = NULL)
+```
+
+# Personnalisation
+
+Tous les graphiques sont interactifs et peuvent être personnalisés :
+
+- Zoom
+- Pan
+- Hover pour plus d'informations
+- Téléchargement en PNG
+
+# Exemples avancés
+
+## Filtrer par auteur
+```{r eval=FALSE}
+# Visualiser l'activité d'un auteur spécifique
+plot_activity_by_weekday(data, authors = "John Doe")
+```
+
+## Combiner plusieurs visualisations
+```{r eval=FALSE}
+# Créer un dashboard personnalisé
+library(gridExtra)
+p1 <- plot_activity_by_weekday(data)
+p2 <- plot_activity_by_hour(data)
+grid.arrange(p1, p2, ncol = 2)
+```
+
+# Conseils
+
+- Utilisez le zoom pour explorer les détails
+- Exportez les graphiques pour vos rapports
+- Comparez les patterns entre différents auteurs
+- Identifiez les périodes d'activité intense 

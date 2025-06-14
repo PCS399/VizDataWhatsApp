@@ -2,15 +2,17 @@ Package: VizDataWhatsApp
 Title: Visualisation interactive des conversations WhatsApp
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Jésus",
-           family = "USER",
+    person(given = "Pierre Claver",
+           family = "SIDIBE",
            role = c("aut", "cre"),
-           email = "jesus.user@example.com")
+           email = "pierreclaversidibe399@outlook.fr")
 Description: Une application Shiny pour visualiser et analyser les conversations WhatsApp.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+URL: https://PCS399.github.io/VizDataWhatsApp/
+BugReports: https://github.com/PCS399/VizDataWhatsApp/issues
 Imports: 
     dplyr,
     ggplot2,
@@ -27,5 +29,6 @@ Imports:
     htmltools,
     tidyverse
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    pkgdown
 Config/testthat/edition: 3

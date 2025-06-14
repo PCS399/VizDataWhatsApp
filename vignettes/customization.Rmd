@@ -1,0 +1,84 @@
+---
+title: "Personnalisation de l'application"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Personnalisation de l'application}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Personnalisation de l'interface
+
+## Thème et couleurs
+
+L'application utilise le thème cosmo de Bootswatch, mais vous pouvez le personnaliser en modifiant le fichier `_pkgdown.yml` :
+
+```yaml
+template:
+  params:
+    bootswatch: cosmo  # Choisissez parmi : cerulean, cosmo, darkly, flatly, etc.
+```
+
+## Logo
+
+Pour changer le logo :
+1. Placez votre logo dans `inst/www/`
+2. Mettez à jour le chemin dans `_pkgdown.yml`
+
+# Personnalisation des graphiques
+
+## Styles des graphiques
+
+Vous pouvez personnaliser l'apparence des graphiques en modifiant les fonctions de visualisation :
+
+```{r eval=FALSE}
+# Exemple de personnalisation
+plot_activity_by_weekday(data) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set3")
+```
+
+## Options disponibles
+
+- Thèmes : `theme_minimal()`, `theme_dark()`, etc.
+- Palettes de couleurs : `scale_fill_brewer()`, `scale_color_viridis()`, etc.
+- Labels : `labs()`, `xlab()`, `ylab()`
+- Échelles : `scale_x_continuous()`, `scale_y_continuous()`
+
+# Internationalisation
+
+L'application supporte le français et l'anglais. Pour ajouter une nouvelle langue :
+
+1. Créez un fichier de traduction dans `inst/translations/`
+2. Ajoutez la langue dans la fonction `get_translations()`
+3. Mettez à jour l'interface utilisateur
+
+# Exemple de personnalisation complète
+
+```{r eval=FALSE}
+# Créer un thème personnalisé
+my_theme <- theme_minimal() +
+  theme(
+    text = element_text(family = "Arial"),
+    plot.title = element_text(size = 16, face = "bold"),
+    axis.title = element_text(size = 12),
+    legend.position = "bottom"
+  )
+
+# Appliquer le thème
+plot_activity_by_weekday(data) + my_theme
+```
+
+# Conseils avancés
+
+- Utilisez `ggplot2` pour des personnalisations avancées
+- Créez vos propres fonctions de visualisation
+- Personnalisez les tooltips avec `plotly`
+- Ajoutez des annotations personnalisées 

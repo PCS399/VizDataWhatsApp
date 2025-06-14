@@ -1,0 +1,51 @@
+---
+title: "Guide de démarrage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Guide de démarrage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Installation
+
+Pour installer VizDataWhatsApp, utilisez la commande suivante :
+
+```{r eval=FALSE}
+# Installation depuis GitHub
+devtools::install_github("PCS399/VizDataWhatsApp")
+```
+
+# Utilisation de base
+
+Une fois le package installé, vous pouvez lancer l'application avec :
+
+```{r eval=FALSE}
+library(VizDataWhatsApp)
+run_whatsapp_viz_app()
+```
+
+# Fonctionnalités principales
+
+L'application offre plusieurs fonctionnalités pour analyser vos conversations WhatsApp :
+
+- **Importation de données** : Importez facilement vos fichiers d'export WhatsApp
+- **Visualisation temporelle** : Analysez l'activité par jour et par heure
+- **Analyse lexicale** : Explorez la diversité du vocabulaire utilisé
+- **Réactions** : Visualisez les réactions aux messages
+- **Interface multilingue** : Disponible en français et en anglais
+
+# Prochaines étapes
+
+Consultez les autres articles pour des exemples détaillés et des tutoriels avancés :
+
+- [Importation des données](import-data.html)
+- [Visualisation](visualization.html)
+- [Personnalisation](customization.html) 
