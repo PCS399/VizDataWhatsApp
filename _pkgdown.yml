@@ -1,0 +1,18 @@
+url: https://PCS399.github.io/VizDataWhatsApp/
+
+template:
+  params:
+    bootswatch: cosmo
+
+reference:
+  - title: "Fonctions principales"
+    desc: "Fonctions principales du package"
+  - title: "Fonctions utilitaires"
+    desc: "Fonctions utilitaires et internes"
+
+articles:
+  - title: "Guide de démarrage"
+    navbar: "Guide"
+    contents:
+      - "getting-started"
+      - "examples" 

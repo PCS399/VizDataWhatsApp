@@ -1,10 +1,64 @@
-#' @importFrom shiny shinyApp fluidPage sidebarLayout sidebarPanel mainPanel tabsetPanel tabPanel
-#' @importFrom shiny fileInput selectInput plotOutput renderPlot renderText reactive
-#' @importFrom shinyjs useShinyjs extendShinyjs
-#' @importFrom plotly renderPlotly plotlyOutput
-#' @importFrom magrittr %>%
-#' @importFrom dplyr filter
+#' @importFrom shiny shinyApp
+#' @importFrom shiny fluidPage
+#' @importFrom shiny titlePanel
+#' @importFrom shiny sidebarLayout
+#' @importFrom shiny sidebarPanel
+#' @importFrom shiny mainPanel
+#' @importFrom shiny fileInput
+#' @importFrom shiny selectInput
+#' @importFrom shiny tabsetPanel
+#' @importFrom shiny tabPanel
+#' @importFrom shiny plotOutput
+#' @importFrom shiny textOutput
+#' @importFrom shiny renderText
+#' @importFrom shiny renderPlot
+#' @importFrom shiny div
+#' @importFrom shiny img
+#' @importFrom shiny h1
+#' @importFrom shiny h2
+#' @importFrom shiny tags
+#' @importFrom shiny HTML
+#' @importFrom shinyjs useShinyjs
 #' @importFrom shinyjs runjs
+#' @importFrom plotly plotlyOutput
+#' @importFrom plotly renderPlotly
+#' @importFrom dplyr %>%
+#' @importFrom dplyr filter
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarise
+#' @importFrom dplyr arrange
+#' @importFrom dplyr desc
+#' @importFrom dplyr n
+#' @importFrom dplyr n_distinct
+#' @importFrom dplyr mutate
+#' @importFrom dplyr count
+#' @importFrom dplyr top_n
+#' @importFrom dplyr left_join
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 geom_bar
+#' @importFrom ggplot2 geom_line
+#' @importFrom ggplot2 geom_point
+#' @importFrom ggplot2 geom_col
+#' @importFrom ggplot2 geom_text
+#' @importFrom ggplot2 labs
+#' @importFrom ggplot2 theme_minimal
+#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 element_text
+#' @importFrom ggplot2 element_blank
+#' @importFrom ggplot2 coord_flip
+#' @importFrom ggplot2 facet_wrap
+#' @importFrom ggplot2 scale_x_continuous
+#' @importFrom ggplot2 scale_y_continuous
+#' @importFrom ggplot2 expansion
+#' @importFrom plotly ggplotly
+#' @importFrom lubridate wday
+#' @importFrom lubridate hour
+#' @importFrom lubridate date
+#' @importFrom tidytext unnest_tokens
+#' @importFrom tidyr unnest
+#' @importFrom stringr str_detect
+#' @importFrom scales comma
 
 #' Lancer l'application WhatsAppViz
 #' @export
@@ -12,28 +66,47 @@ run_whatsapp_viz_app <- function() {
   # Définir les styles CSS
   css <- "
     .logo {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-      background-color: white;
-      border-radius: 50%;
+      width: 50px;
+      height: 50px;
       padding: 5px;
+      margin-right: 15px;
+      background-color: transparent;
+      border-radius: 50%;
     }
     .header {
       display: flex;
       align-items: center;
-      padding: 10px;
+      padding: 10px 20px;
       background-color: #128C7E;
       color: white;
       margin-bottom: 20px;
+      border-radius: 5px;
     }
     .footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #128C7E;
-      color: white;
       position: fixed;
       bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #128C7E;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      width: 100vw;
+      margin: 0;
+      border-radius: 0;
+      box-sizing: border-box;
+    }
+    .content {
+      margin-bottom: 60px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container-fluid {
+      padding: 0;
+      margin: 0;
       width: 100%;
     }
     .sidebar {
@@ -77,11 +150,11 @@ run_whatsapp_viz_app <- function() {
       shiny::actionButton("lang_en", "EN", class = "language-btn")
     ),
     
-    # En-tête
+    # En-tête avec logo et titre
     shiny::div(
       class = "header",
       shiny::img(src = "logo.svg", class = "logo", alt = "WhatsApp Logo"),
-      shiny::h2(shiny::textOutput("app_title"))
+      shiny::h1("VizDataWhatsApp")
     ),
     
     # Layout principal

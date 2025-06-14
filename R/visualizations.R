@@ -462,9 +462,6 @@ run_whatsapp_viz_app <- function() {
           ),
           shiny::div(class = "box",
             plotly::plotlyOutput("hourly_plot", height = "400px")
-          ),
-          shiny::div(class = "box",
-            plotly::plotlyOutput("weekday_plot", height = "400px")
           )
         ),
         shiny::tabPanel(shiny::textOutput("tab_authors"),
@@ -484,14 +481,6 @@ run_whatsapp_viz_app <- function() {
           ),
           shiny::div(class = "box",
             plotly::plotlyOutput("emojis_plot", height = "400px")
-          ),
-          shiny::div(class = "box",
-            plotly::plotlyOutput("lexical_plot", height = "400px")
-          )
-        ),
-        shiny::tabPanel(shiny::textOutput("tab_interactions"),
-          shiny::div(class = "box",
-            plotly::plotlyOutput("reactions_plot", height = "400px")
           )
         )
       )
@@ -555,11 +544,6 @@ run_whatsapp_viz_app <- function() {
     output$tab_content <- shiny::renderText({
       translations[[current_lang()]]$tabs$content
     })
-    
-    output$tab_interactions <- shiny::renderText({
-      translations[[current_lang()]]$tabs$interactions
-    })
-    
     output$footer_text <- shiny::renderText({
       translations[[current_lang()]]$footer
     })
@@ -590,11 +574,6 @@ run_whatsapp_viz_app <- function() {
       plot_activity_by_hour(chat_data(), input$authors)
     })
     
-    output$weekday_plot <- plotly::renderPlotly({
-      req(chat_data())
-      plot_activity_by_weekday(chat_data(), input$authors)
-    })
-    
     # Graphiques d'auteurs
     output$author_plot <- plotly::renderPlotly({
       req(chat_data())
@@ -622,16 +601,6 @@ run_whatsapp_viz_app <- function() {
       plot_most_used_emojis(chat_data(), input$authors)
     })
     
-    output$lexical_plot <- plotly::renderPlotly({
-      req(chat_data())
-      plot_lexical_diversity(chat_data(), input$authors)
-    })
-    
-    # Graphiques d'interactions
-    output$reactions_plot <- plotly::renderPlotly({
-      req(chat_data())
-      plot_message_reactions(chat_data(), input$authors)
-    })
   }
   
   shiny::shinyApp(ui, server)

@@ -20,6 +20,4 @@ Un graphique plotly
 }
 \description{
 Créer un graphique des messages par jour
-
-Créer un graphique des messages par jour
 }

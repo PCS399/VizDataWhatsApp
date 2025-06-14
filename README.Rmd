@@ -1,0 +1,56 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+# VizDataWhatsApp
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/jesususer/VizDataWhatsApp/workflows/R-CMD-check/badge.svg)](https://github.com/jesususer/VizDataWhatsApp/actions)
+[![Codecov test coverage](https://codecov.io/gh/jesususer/VizDataWhatsApp/branch/main/graph/badge.svg)](https://codecov.io/gh/jesususer/VizDataWhatsApp?branch=main)
+<!-- badges: end -->
+
+VizDataWhatsApp est un package R qui fournit une application Shiny interactive pour visualiser et analyser les conversations WhatsApp.
+
+## Installation
+
+``` r
+# Installation depuis GitHub
+devtools::install_github("jesususer/VizDataWhatsApp")
+```
+
+## Utilisation
+
+``` r
+library(VizDataWhatsApp)
+
+# Lancer l'application
+run_whatsapp_viz_app()
+```
+
+## Fonctionnalités
+
+- Visualisation de l'activité par jour de la semaine
+- Visualisation de l'activité par heure
+- Analyse de la diversité lexicale
+- Analyse des réactions aux messages
+- Support multilingue (FR/EN)
+
+## Exemple
+
+``` r
+# Charger le package
+library(VizDataWhatsApp)
+
+# Lancer l'application
+run_whatsapp_viz_app()
+```
+
+## Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails. 

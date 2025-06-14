@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_functions.R, R/visualizations.R
 \name{plot_message_evolution}
 \alias{plot_message_evolution}
-\title{Créer un graphique de l'évolution des messages}
+\title{Créer un graphique de l'évolution temporelle des messages}
 \usage{
 plot_message_evolution(data, selected_authors = NULL)
 
@@ -19,7 +19,7 @@ Un graphique plotly
 Un graphique plotly
 }
 \description{
-Créer un graphique de l'évolution des messages
+Créer un graphique de l'évolution temporelle des messages
 
 Créer un graphique de l'évolution temporelle des messages
 }

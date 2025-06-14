@@ -1,0 +1,19 @@
+citHeader("To cite VizDataWhatsApp in publications use:")
+
+citEntry(entry = "Manual",
+         title = "VizDataWhatsApp: Visualisation interactive des conversations WhatsApp",
+         author = personList(
+           person("Jésus", "USER",
+                 role = c("aut", "cre"),
+                 email = "jesus.user@example.com")
+         ),
+         year = 2024,
+         note = "R package version 0.0.0.9000",
+         url = "https://github.com/jesususer/VizDataWhatsApp",
+         textVersion = paste(
+           "USER, J. (2024).",
+           "VizDataWhatsApp: Visualisation interactive des conversations WhatsApp.",
+           "R package version 0.0.0.9000.",
+           "https://github.com/jesususer/VizDataWhatsApp"
+         )
+) 

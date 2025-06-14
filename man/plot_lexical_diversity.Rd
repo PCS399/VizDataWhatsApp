@@ -7,6 +7,8 @@
 plot_lexical_diversity(data, selected_authors = NULL)
 
 plot_lexical_diversity(data, selected_authors = NULL)
+
+plot_lexical_diversity(data, selected_authors = NULL)
 }
 \arguments{
 \item{data}{Données WhatsApp}
@@ -17,8 +19,12 @@ plot_lexical_diversity(data, selected_authors = NULL)
 Un graphique plotly
 
 Un graphique plotly
+
+Un graphique plotly
 }
 \description{
+Créer un graphique de la diversité lexicale
+
 Créer un graphique de la diversité lexicale
 
 Créer un graphique de la diversité lexicale
