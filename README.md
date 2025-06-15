@@ -29,15 +29,15 @@ run_whatsapp_viz_app()
 
 ## Fonctionnalités
 
-- **Importation de données** : Importez facilement vos fichiers d'export WhatsApp
-- **Visualisation temporelle** : Analysez l'activité par jour et par heure
-- **Analyse lexicale** : Explorez la diversité du vocabulaire utilisé
-- **Réactions** : Visualisez les réactions aux messages
-- **Interface multilingue** : Disponible en français et en anglais
+- **Importation de données** : Importez facilement vos fichiers d'export WhatsApp ;
+- **Visualisation temporelle** : Analysez l'activité par jour et par heure ;
+- **Analyse lexicale** : Explorez la diversité du vocabulaire utilisé ;
+- **Réactions** : Visualisez les réactions aux messages ;
+- **Interface multilingue** : Disponible en français et en anglais (traduction de l'interface sans les graphiques).
 
 ## Documentation
 
-Pour plus d'informations, consultez la [documentation complète](https://PCS399.github.io/VizDataWhatsApp/).
+Pour plus d'informations, consultez la [documentation complète](https://PCS399.github.io/VizDataWhatsApp/) (en cours de conception).
 
 ## Contribution
 
